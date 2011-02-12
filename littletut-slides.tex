@@ -1,0 +1,116 @@
+% littletut-slides.tex
+% 2010 Andrew Pennebaker
+
+\documentclass{beamer}
+\usepackage{helvet}
+\usetheme{Antibes}
+\usecolortheme{dove}
+
+% Removes bottom navigation bars and symbols
+% From http://stackoverflow.com/questions/1435837/1436498#1436498
+\setbeamertemplate{footline}[page number]{}
+\setbeamertemplate{navigation symbols}{}
+
+% Symbol footnotes
+% From http://help-csli.stanford.edu/tex/latex-footnotes.shtml#symbol
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup} 
+
+% Remove top-left frame header
+% From http://old.nabble.com/Re%3A-beamer-sidebar-no-title-no-author-p26564975.html
+\title[]{Little Tut.\symbolfootnote[1]{\url{http://www.yellosoft.us/littletut}}}
+\author[]{Andrew Pennebaker}
+
+\usepackage{verbatim}
+\usepackage{graphicx}
+
+% Beamer includes hyperref.
+% From http://groups.google.com/group/latexusersgroup/msg/a0f25b86d30e26d4
+\hypersetup{
+	pdfauthor={Andrew Pennebaker},
+	pdftitle={Little Tut.},
+	pdfpagemode=FullScreen,
+	pdfstartview={},
+	pdfborder={0 0 0},
+	urlbordercolor={1 1 1}
+}
+
+\begin{document}
+
+\newcommand{\TeXLive}{{\TeX} Live}
+\newcommand{\MacTeX}{Mac{\TeX}}
+\newcommand{\TeXworks}{{\TeX}works}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Get \LaTeX}
+\begin{enumerate}
+\item
+
+Install \TeXLive\footnote{\url{http://tug.org/texlive}} or \MacTeX\footnote{\url{http://www.tug.org/mactex/2009}}.
+
+\item
+
+Install \TeXworks\footnote{\url{http://code.google.com/p/texworks}}.
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Type \LaTeX}
+\begin{enumerate}
+\item
+
+Open \TeXworks.
+
+\item
+
+Set the typeset to \texttt{pdfLaTeX}.
+
+\item
+
+Save a new file as \texttt{hello.tex}.
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Type \LaTeX}
+\begin{enumerate}
+% Continue enumeration
+% From http://www.personal.ceu.hu/tex/counters.htm
+\setcounter{enumi}{3}
+\item
+Type the following code:
+\begin{verbatim}
+\documentclass{article}
+\title{Hello World}
+\begin{document}
+\maketitle
+\end{document}
+\end{verbatim}
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compile \LaTeX}
+\begin{enumerate}
+
+\item
+% Vertical alignment by John J. Camilleri (http://johnjcamilleri.com/2010/05/vertical-alignment-of-inline-images-in-latex/)
+Click the green typeset button (\raisebox{-1.6mm}{\includegraphics[scale=0.5]{runtool.png}}).
+
+\item
+The {\LaTeX} code compiles to a PDF file.
+
+\item
+A preview appears.
+
+\end{enumerate}
+\end{frame}
+
+\end{document}

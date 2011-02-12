@@ -1,0 +1,86 @@
+% littletut-poster.tex
+% 2010 Andrew Pennebaker
+
+\documentclass[b1,landscape]{sciposter}
+
+\title{Little Tut.}
+\author{Andrew Pennebaker}
+
+\usepackage{graphicx}
+\usepackage[
+	pdfauthor={Andrew Pennebaker},
+	pdftitle={Little Tut.},
+	pdfborder={0 0 0},
+	urlbordercolor={1 1 1}
+]{hyperref}
+
+\newcommand{\TeXLive}{{\TeX} Live}
+\newcommand{\MacTeX}{Mac{\TeX}}
+\newcommand{\TeXworks}{{\TeX}works}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\url{http://www.yellosoft.us/littletut}
+\end{center}
+
+\section*{Get \LaTeX}
+
+\begin{enumerate}
+\item
+
+Install \TeXLive\footnote{\url{http://tug.org/texlive}} or \MacTeX\footnote{\url{http://www.tug.org/mactex/2009}}.
+
+\item
+
+Install \TeXworks\footnote{\url{http://code.google.com/p/texworks}}.
+
+\end{enumerate}
+
+\section*{Type \LaTeX}
+
+\begin{enumerate}
+\item
+
+Open \TeXworks.
+
+\item
+
+Set the typeset to \texttt{pdfLaTeX}.
+
+\item
+
+Save a new file as \texttt{hello.tex}.
+
+\item
+
+Type the following code:
+\begin{verbatim}
+\documentclass{article}
+\title{Hello World}
+\begin{document}
+\maketitle
+\end{document}
+\end{verbatim}
+
+\end{enumerate}
+
+\section*{Compile \LaTeX}
+
+\begin{enumerate}
+
+\item
+% Vertical alignment by John J. Camilleri (http://johnjcamilleri.com/2010/05/vertical-alignment-of-inline-images-in-latex/)
+Click the green typeset button (\raisebox{-2.5mm}{\includegraphics{runtool.png}}).
+
+\item
+The {\LaTeX} code compiles to a PDF file.
+
+\item
+A Preview appears.
+
+\end{enumerate}
+
+\end{document}
