@@ -10,6 +10,9 @@ littletut-slides.pdf: littletut-slides.tex
 littletut-poster.pdf: little-poster.tex
 	pdflatex little-poster
 
+lint:
+	for f in *.tex; do lacheck $$f; done
+
 clean:
 	-rm *.out
 	-rm *.log
