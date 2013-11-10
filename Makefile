@@ -10,8 +10,13 @@ littletut-slides.pdf: littletut-slides.tex
 littletut-poster.pdf: little-poster.tex
 	pdflatex little-poster
 
-lint:
+lacheck:
 	for f in *.tex; do lacheck $$f; done
+
+style-check:
+	style-check.rb *.tex
+
+lint: lacheck style-check
 
 clean:
 	-rm *.out
