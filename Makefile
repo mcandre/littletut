@@ -1,14 +1,14 @@
 hello.pdf: hello.tex
-	pdflatex hello
+	pdflatex -interaction=nonstopmode hello
 
 littletut.pdf: littletut.tex
-	pdflatex littletut
+	pdflatex -interaction=nonstopmode littletut
 
 littletut-slides.pdf: littletut-slides.tex
-	pdflatex littletut-slides
+	pdflatex -interaction=nonstopmode littletut-slides
 
 littletut-poster.pdf: little-poster.tex
-	pdflatex little-poster
+	pdflatex -interaction=nonstopmode little-poster
 
 lacheck:
 	-for f in *.tex; do lacheck $$f; done
