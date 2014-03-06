@@ -4,34 +4,42 @@
 
 http://www.yellosoft.us/littletut
 
-# DEVELOPMENT REQUIREMENTS
+# REQUIREMENTS
 
-* `pdflatex`
+* [LaTeX](http://latex-project.org/ftp.html)
 
-## OPTIONAL
+## Optional
 
-* [Ruby](https://www.ruby-lang.org/en/)
-* [guard](http://guardgem.org/)
 * `lacheck`
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Guard](http://guardgem.org/)
+* [aspelllint](https://github.com/mcandre/aspelllint)
 
-Install `guard`:
+Install Guard and aspelllint:
 
     $ bundle
 
-# BUILD
+# DEVELOPMENT
+
+## Build
 
     $ make hello.pdf
     $ open hello.pdf
 
-# CLEAN
+## Clean
 
     $ make clean
 
-# LINT
+## Lint
 
     $ make lint
 
-# GUARD
+## Spell Check
+
+    $ aspelllint
+    ...
+
+## Local CI
 
 Guard can automatically recompile .tex files while you code.
 
