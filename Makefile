@@ -16,7 +16,10 @@ lacheck:
 style-check:
 	-style-check.rb *.tex
 
-lint: lacheck style-check
+lili:
+	bundle exec lili .
+
+lint: lacheck style-check lili
 
 clean:
 	-rm *.out
