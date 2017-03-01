@@ -19,7 +19,10 @@ style-check:
 lili:
 	bundle exec lili .
 
-lint: lacheck style-check lili
+chktex:
+	chktex .
+
+lint: lacheck style-check lili chktex
 
 clean:
 	-rm *.out

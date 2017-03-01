@@ -14,6 +14,7 @@ http://www.yellosoft.us/littletut
 * [Ruby](https://www.ruby-lang.org/en/)
 * [Guard](http://guardgem.org/)
 * [aspelllint](https://github.com/mcandre/aspelllint)
+* [chktex](http://baruch.ev-en.org/proj/chktex/)
 
 Install Guard and aspelllint:
 
